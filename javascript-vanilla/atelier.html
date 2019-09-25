@@ -7,9 +7,16 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Hello Wilders</h1>
+
+    <ul id="result">
+        <li>Aucun résultat</li>
+    </ul>
+
+    <ul id="page"></ul>
     
     <script>
-        let age = 31;
+        /*let age = 31;
         let name = "Maël Vincent";
         let inTraining = false;
         let school = "Wild Lyon";
@@ -17,7 +24,21 @@
         console.log(typeof age);
         console.log(typeof name);
         console.log(typeof inTraining);
-        console.log(typeof school);
+        console.log(typeof school);*/
+
+        let movies = ["Kill Bill", "Volte face", "Ben hur", "Blanche neige", "Le parrain"];
+        //let movies = new Array();
+
+        //let resultElt = document.getElementById('result');
+        for (let isabelle = 0; isabelle < movies.length; isabelle++) {
+            console.log(movies[isabelle]);
+            //resultElt.innerHTML += `<li>${movies[isabelle]}</li>`;
+            document.getElementById('page').innerHTML += `<li>${movies[isabelle]}</li>`;
+            document.getElementById('page').style.color = 'red';
+            document.getElementById('page').addEventListener('click', () => {
+                alert("Tu as cliqué");
+            });
+        }
     </script>
 
 </body>
