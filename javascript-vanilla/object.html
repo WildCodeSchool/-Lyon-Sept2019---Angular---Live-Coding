@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="name"></h1>
+
+    <div id="avatars">
+
+    </div>
+
+    <script>
+        const user = {
+            name: "Maël",
+            age: 31,
+            nationality: "French",
+            avatars: [
+                'http://mael-vincent.com/img/profile.png',
+                'http://static8.viadeo-static.com/2S5QSpF_YBTPbVUrQ6Hc7hfQgzY=/300x300/member/0022b2vd5cgq89hi%3Fts%3D1274267058000',
+            ],
+            hobbies: [
+                {
+                    name: 'Overwatch',
+                    hours: 400
+                },
+                {
+                    name: 'Monster Hunter World',
+                    hours: 30
+                }
+            ]
+        };
+
+        // Delete a property in the user object
+        // delete user.name;
+
+        let nameElt = document.getElementById('name');
+        nameElt.innerHTML = user.name;
+
+        function onAvatarClicked() {
+            alert('Avatar cliqué');
+        }
+        
+        let avatarsElt = document.getElementById('avatars');
+        for(let i in user.avatars) {
+            avatarsElt.innerHTML += `<img src="${user.avatars[i]}" onclick="onAvatarClicked()" />`;
+        }
+    </script>
+</body>
+</html>
