@@ -1,0 +1,13 @@
+<p>calculator works!</p>
+
+<button (click)="generateRandomNumber1()">Générer Nombre aléatoire 1</button>
+<button (click)="generateRandomNumber2()">Générer Nombre aléatoire 2</button>
+
+<button (click)="add()">+</button>
+<button (click)="sub()">-</button>
+<button (click)="divide()">/</button>
+<button (click)="multiply()">*</button>
+
+<div>
+    {{ number1 }} {{ operator }} {{ number2 }} = {{ result }}
+</div>
