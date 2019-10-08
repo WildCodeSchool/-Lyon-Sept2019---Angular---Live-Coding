@@ -43,5 +43,14 @@ function solutionWithFor() {
 // Bonus
 // Do it with map and filter
 function solutionWithMapAndFilter() {
+    return characters.map(character => {
+        let characterMovies = movies.filter(movie => movie.characters.indexOf(character) != -1);
 
+        return {
+            name: character,
+            movies: characterMovies.map(movie => movie.title)
+        };
+    });
 }
+
+console.log(solutionWithMapAndFilter());

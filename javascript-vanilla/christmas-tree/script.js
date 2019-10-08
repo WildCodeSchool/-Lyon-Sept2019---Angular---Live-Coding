@@ -59,7 +59,7 @@ function removeDot(i) {
  * Create between 0 and a hundred dots.
  */
 function start() {
-    for (let i = 0; i <= randomNumber(100); i++) {
+    for (let i = 0; i <= 1000; i++) {
         addDot(i);
     }
 }
