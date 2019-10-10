@@ -1,0 +1,6 @@
+<app-cart [products]="productsToBuy"></app-cart>
+
+<app-list-products 
+    [display-products]="products"
+    (addToCartEvent)="addToCart($event)">
+</app-list-products>
