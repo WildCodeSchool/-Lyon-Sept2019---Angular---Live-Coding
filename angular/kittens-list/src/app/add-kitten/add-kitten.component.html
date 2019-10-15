@@ -1,0 +1,15 @@
+<h1>Add a new Kitten</h1>
+
+<div>
+  <div>
+    <label>Name</label>
+    <input [(ngModel)]="kitten.name" type="text"/>
+  </div>
+
+  <div>
+    <label>Image</label>
+    <input [(ngModel)]="kitten.image" type="text"/>
+  </div>
+
+  <button (click)="add()">Add</button>
+</div>
