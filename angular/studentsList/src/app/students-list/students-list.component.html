@@ -1,0 +1,7 @@
+<h1>Liste des étudiants</h1>
+
+<ul>
+    <li *ngFor="let s of studentsToDisplay">
+        <a routerLink="/card/{{ s.firstname }}_{{ s.lastname }}">{{ s.firstname }} {{ s.lastname }}</a>
+    </li>
+</ul>
