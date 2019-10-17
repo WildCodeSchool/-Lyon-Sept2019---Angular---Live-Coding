@@ -1,0 +1,26 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+
+  user = {
+    email: '',
+    password: ''
+  }
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  connecteMoi(loginForm) {
+    console.log("J'essaie de te connecter");
+    console.log(loginForm.value);
+
+    console.log(this.user);
+  }
+}

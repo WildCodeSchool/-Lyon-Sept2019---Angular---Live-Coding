@@ -1,0 +1,29 @@
+<form (submit)="loginForm.valid && connecteMoi(loginForm)" #loginForm="ngForm">
+    <div>
+        Email : <input type="email" name="monEmail" [(ngModel)]="user.email" required email #emailRef="ngModel"/>
+    </div>
+
+    <div>
+        Password : <input type="password" name="password" [(ngModel)]="user.password" required minlength="6" #passwordRef="ngModel" />
+    </div>
+
+    <div *ngIf="loginForm.submitted">
+        <!-- Success message -->
+        <div *ngIf="emailRef.valid && passwordRef.valid">
+            Login validé
+        </div>
+
+        <!-- Error messages -->
+        <div>
+            <div *ngIf="emailRef.errors && emailRef.errors.email">
+                L'email n'est pas valide
+            </div>
+            <div *ngIf="passwordRef.errors">
+                <span *ngIf="passwordRef.errors.required">Password est requis</span>
+                <span *ngIf="passwordRef.errors.minlength">Le mot de passe doit contenir 6 caractères minimum</span>
+            </div>
+        </div>
+    </div>
+
+    <button>Envoyer</button>
+</form>
