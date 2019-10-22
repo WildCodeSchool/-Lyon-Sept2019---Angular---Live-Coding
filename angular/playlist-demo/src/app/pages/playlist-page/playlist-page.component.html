@@ -1,0 +1,9 @@
+<h1>Ma super playlist</h1>
+
+<app-music-player [song]="playlistService.currentSong"></app-music-player>
+
+<ul>
+    <li class="song" *ngFor="let song of songs" (click)="onSongSelected(song)">
+        {{ song.name }}
+    </li>
+</ul>
