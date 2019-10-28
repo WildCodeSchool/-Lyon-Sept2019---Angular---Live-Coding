@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pokemon {
+    max-width: 100px;
+}
+
+img {
+    max-width: 100px;
+}
