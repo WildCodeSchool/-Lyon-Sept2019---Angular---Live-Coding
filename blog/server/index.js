@@ -38,9 +38,7 @@ app.get('/api/posts/:id', (request, response) => {
 // Create a post
 app.post('/api/posts', (request, response) => {
   const post = request.body;
-  console.log(post);
   connection.query(`INSERT INTO posts (title, content, creationDate) VALUES(?, ?, NOW())`, [post.title, post.content], (err, results) => {
-    console.log(err);
     if (err) {
       response.status(500).send('Error retrieving posts');
     }
